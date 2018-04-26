@@ -9,6 +9,11 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
+    let s1 = stringA.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('');
+    let s2 = stringB.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('');
+    return s1 === s2;
+}
+/* function anagrams(stringA, stringB) {
     let s1 = stringA.replace(/[^\w]/g, "").toLowerCase();
     let s2 = stringB.replace(/[^\w]/g, "").toLowerCase();
 
@@ -35,6 +40,6 @@ function anagrams(stringA, stringB) {
     }
 
 
-}
+} */
 
 module.exports = anagrams;
